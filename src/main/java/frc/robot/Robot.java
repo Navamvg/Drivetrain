@@ -19,9 +19,9 @@ import frc.robot.commands.DriveCommand;
 public class Robot extends TimedRobot {
 
   public static DriveSubsystem driveSubsystem = new DriveSubsystem();
+  public static OI m_oi;
 
   private Command m_autonomousCommand;
-  Command driveCommand = new DriveCommand();
 
   private RobotContainer m_robotContainer;
 
@@ -81,7 +81,7 @@ public class Robot extends TimedRobot {
     // continue until interrupted by another command, remove
     // this line or comment it out.
 
-    driveCommand.start();
+    DriveCommand.start();
     
     if (m_autonomousCommand != null) {
       m_autonomousCommand.cancel();
