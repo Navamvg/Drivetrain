@@ -3,12 +3,12 @@ package frc.robot;
 public class RobotMap {
     
     // Drivetrain speed controllers
-
-    public static final int frontRight = 1;
-    public static final int backRight = 2;
+    
     public static final int frontLeft = 3;
     public static final int backLeft = 4;
-
+    public static final int frontRight = 1;
+    public static final int backRight = 2;
+    
     // Intake speed controllers
 
     public static final int intake1 = 4;
