@@ -21,7 +21,8 @@ public class DriveSubsystem extends SubsystemBase {
 
   PWM motor = new PWN(1);
 
-  SpeedControllerGroup left = new SpeedControllerGroup(frontLeft, backLeft)
+  SpeedControllerGroup left = new SpeedControllerGroup(frontLeft, backLeft);
+  SpeedControllerGroup right = new SpeedControllerGroup(frontRight, backRight);
 
 
   public DriveSubsystem() {}
