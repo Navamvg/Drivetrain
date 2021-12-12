@@ -21,7 +21,8 @@ public class Robot extends TimedRobot {
   public static DriveSubsystem driveSubsystem = new DriveSubsystem();
   public static OI m_oi;
 
-  private Command m_autonomousCommand;
+  Command driveCommand = new DriveCommand();
+  Command m_autonomousCommand;
 
   private RobotContainer m_robotContainer;
 
@@ -81,7 +82,7 @@ public class Robot extends TimedRobot {
     // continue until interrupted by another command, remove
     // this line or comment it out.
 
-    DriveCommand.start();
+    driveCommand.start();
     
     if (m_autonomousCommand != null) {
       m_autonomousCommand.cancel();

@@ -12,13 +12,11 @@ public class OI {
     // Joystick accessors
 
     public Joystick getDriverStick(){
-
         return driverStick;
 
     }
 
     public Joystick getOperatorStick(){
-
         return operatorStick;
 
     }
