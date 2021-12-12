@@ -29,7 +29,7 @@ public class Robot extends TimedRobot {
 
   private RobotContainer m_robotContainer;
 
-  DriveCommand driveCommand = new DriveCommand();
+  Command driveCommand = new driveCommand();
   /**
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
