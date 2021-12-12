@@ -11,12 +11,12 @@ public class DriveCommand extends Command {
 
     @Override
     protected void initialize() {
-        Robot.DriveSubsystem.stop();
+        Robot.driveSubsystem.stop();
     }
 
     @Override
     protected void execute() {
-        Robot.DriveSubsystem.driveJoystick(Robot.m_oi.getDriverStick(), 1);
+        Robot.driveSubsystem.driveJoystick(Robot.m_oi.getDriverStick(), 1);
     }
 
     @Override
@@ -26,10 +26,11 @@ public class DriveCommand extends Command {
 
     @Override
     protected void end() {
-        Robot.DriveSubsystem.stop();
+        Robot.driveSubsystem.stop();
     }
 
-    @Override
-    protected void interrupted();
+    @Override 
+    protected void interrupted(); {
     end();
+    }
 }   
