@@ -29,9 +29,9 @@ public class DriveSubsystem extends SubsystemBase {
 
   public DriveSubsystem() {
 
-    frontRight.setInverted(false);
+    frontRight.setInverted(true);
     frontLeft.setInverted(false);
-    backRight.setInverted(false);
+    backRight.setInverted(true);
     backLeft.setInverted(false);
     drive = new DifferentialDrive(left, right);
 

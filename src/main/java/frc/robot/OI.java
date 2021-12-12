@@ -6,7 +6,7 @@ public class OI {
 
     // Instantiation of joysticks
 
-    Joystick driverStick = new Joystick(0);
+    Joystick driverStick = new Joystick(RobotMap.driveStick);
     Joystick operatorStick = new Joystick(1);
 
     // Joystick accessors

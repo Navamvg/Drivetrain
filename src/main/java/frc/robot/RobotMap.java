@@ -20,4 +20,8 @@ public class RobotMap {
     public static final int doubleSolenoid1 = 1;
     public static final int doubleSolenoid2 = 2;
 
+
+    //joystick port
+    public static final int driveStick = 0;
+
 }
