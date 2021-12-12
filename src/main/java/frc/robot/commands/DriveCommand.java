@@ -5,10 +5,8 @@ import frc.robot.subsystems.DriveSubsystem;
 import frc.robot.Robot;
 
 
-public class DriveCommand extends Command {
-
-
-public class DriveCommand extends Command{
+public class DriveCommand extends Command 
+{
     private final DriveSubsystem driveSubsystem;
     public DriveCommand() {
 
