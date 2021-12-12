@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.subsystems.DriveSubsystem;
-import frc.robot.commands.DriveCommand;
+import frc.robot.commands.driveCommand;
 import edu.wpi.first.wpilibj.Talon;
 
 
@@ -29,7 +29,7 @@ public class Robot extends TimedRobot {
 
   private RobotContainer m_robotContainer;
 
-  Command driveCommand = new driveCommand();
+  Command driveCommand = new DriveCommand();
   /**
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
