@@ -9,8 +9,8 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.subsystems.DriveSubsystem;
 import frc.robot.commands.DriveCommand;
-import frc.robot.commands.ExampleCommand;
-import frc.robot.subsystems.ExampleSubsystem;
+import edu.wpi.first.wpilibj.Talon;
+
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -20,15 +20,16 @@ import frc.robot.subsystems.ExampleSubsystem;
  */
 public class Robot extends TimedRobot {
 
-  public static ExampleSubsystem m_subsystem = new ExampleSubsystem();
   public static DriveSubsystem driveSubsystem = new DriveSubsystem();
+  
   public static OI m_oi;
 
-  DriveCommand driveCommand = new DriveCommand();
-  Command m_autonomousCommand;
+
+  private Command m_autonomousCommand;
 
   private RobotContainer m_robotContainer;
 
+  DriveCommand driveCommand = new DriveCommand();
   /**
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
@@ -85,7 +86,7 @@ public class Robot extends TimedRobot {
     // continue until interrupted by another command, remove
     // this line or comment it out.
 
-    DriveCommand.start();
+    driveCommand.start();
     
     if (m_autonomousCommand != null) {
       m_autonomousCommand.cancel();
@@ -104,5 +105,7 @@ public class Robot extends TimedRobot {
 
   /** This function is called periodically during test mode. */
   @Override
-  public void testPeriodic() {}
+  public void testPeriodic() {
+
+  }
 }
