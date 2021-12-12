@@ -3,7 +3,7 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.Robot;
 
-public class DriveCommand extends Command {
+public class DriveCommand extends Command{
 
     public DriveCommand() {
 
@@ -28,4 +28,7 @@ public class DriveCommand extends Command {
     protected void interrupted() {
         end();
     }
+
+	public static void start() {
+	}
 }   

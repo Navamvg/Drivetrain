@@ -9,6 +9,8 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.subsystems.DriveSubsystem;
 import frc.robot.commands.DriveCommand;
+import frc.robot.commands.ExampleCommand;
+import frc.robot.subsystems.ExampleSubsystem;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -18,10 +20,11 @@ import frc.robot.commands.DriveCommand;
  */
 public class Robot extends TimedRobot {
 
+  public static ExampleSubsystem m_subsystem = new ExampleSubsystem();
   public static DriveSubsystem driveSubsystem = new DriveSubsystem();
   public static OI m_oi;
 
-  Command driveCommand = new DriveCommand();
+  DriveCommand driveCommand = new DriveCommand();
   Command m_autonomousCommand;
 
   private RobotContainer m_robotContainer;
@@ -82,7 +85,7 @@ public class Robot extends TimedRobot {
     // continue until interrupted by another command, remove
     // this line or comment it out.
 
-    driveCommand.start();
+    DriveCommand.start();
     
     if (m_autonomousCommand != null) {
       m_autonomousCommand.cancel();
