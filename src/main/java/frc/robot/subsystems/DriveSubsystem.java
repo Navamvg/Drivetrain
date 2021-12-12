@@ -14,12 +14,12 @@ import frc.robot.RobotMap;
 public class DriveSubsystem extends SubsystemBase {
   /** Creates a new DriveSubsystem. */
 
-  Victor frontRight = new Victor(RobotMap.frontRight);
-  Victor frontLeft = new Victor(RobotMap.frontLeft);
-  Victor backRight = new Victor(RobotMap.backRight);
-  Victor backLeft = new Victor(RobotMap.backRight);
+  Talon frontRight = new Talon(RobotMap.frontRight);
+  Talon frontLeft = new Talon(RobotMap.frontLeft);
+  Talon backRight = new Talon(RobotMap.backRight);
+  Talon backLeft = new Talon(RobotMap.backLeft);
 
-  PWM motor = new PWN(1);
+  PWM motor = new PWM(1);
 
   SpeedControllerGroup left = new SpeedControllerGroup(frontLeft, backLeft);
   SpeedControllerGroup right = new SpeedControllerGroup(frontRight, backRight);
