@@ -2,7 +2,7 @@ package frc.robot;
 
 public class RobotMap {
     
-    // Drive train speed controllers
+    // Drivetrain speed controllers
 
     public static final int frontRight = 0;
     public static final int frontLeft = 1;
@@ -14,6 +14,10 @@ public class RobotMap {
     public static final int intake1 = 4;
     public static final int intake2 = 5;
 
-    
+    // PCM Channels
+
+    public static final int singleSolenoid = 0;
+    public static final int doubleSolenoid1 = 1;
+    public static final int doubleSolenoid2 = 2;
 
 }
