@@ -1,33 +1,33 @@
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.DriveSubsystem;
 import frc.robot.Robot;
+import frc.robot.RobotContainer;
 
-public class DriveCommand extends Command {
-    private final DriveSubsystem driveSubsystem;
+public class DriveCommand extends CommandBase {
 
-    public DriveCommand() {
+    private final DriveSubsystem m_driveSubsystem;
 
+
+    public DriveCommand(DriveSubsystem m_driveSubsystem) {
+        m_driveSubsystem = driveSubsystem;
+        addRequirements(m_driveSubsystem);
     }
 
-    protected void initialize() {
-        Robot.driveSubsystem.stop();
+    public void execute() {
+        m_driveSubsystem.driveJoystick(RobotContainer.m_oi.getDriverStick(), 1);
     }
 
-    protected void execute() {
-        Robot.driveSubsystem.driveJoystick(Robot.m_oi.getDriverStick(), 1);
-    }
-
-    protected boolean isFinished() {
+    public boolean isFinished() {
         return false;
     }
 
-    protected void end() {
-        Robot.driveSubsystem.stop();
+    public void end() {
+        m_driveSubsystem.stop();
     }
 
-    protected void interrupted() {
+    public void interrupted() {
         end();
     }
 }
