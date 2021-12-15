@@ -10,7 +10,7 @@ public class DriveCommand extends CommandBase {
     private final DriveSubsystem m_driveSubsystem;
 
 
-    public DriveCommand(DriveSubsystem m_driveSubsystem) {
+    public DriveCommand(DriveSubsystem driveSubsystem) {
         m_driveSubsystem = driveSubsystem;
         addRequirements(m_driveSubsystem);
     }

@@ -6,9 +6,9 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.can.TalonFX;
 
+import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.PWM;
-import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.RobotMap;
@@ -19,9 +19,9 @@ public class DriveSubsystem extends SubsystemBase {
   TalonFX frontLeft = new TalonFX(RobotMap.frontLeft);
   TalonFX backRight = new TalonFX(RobotMap.backRight);
   TalonFX backLeft = new TalonFX(RobotMap.backLeft);
-
+  
   PWM motor = new PWM(1);
-
+  
   SpeedControllerGroup left =  new SpeedControllerGroup(frontLeft, backLeft);
   SpeedControllerGroup right = new SpeedControllerGroup(frontRight, backRight);
   

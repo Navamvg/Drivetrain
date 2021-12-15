@@ -12,7 +12,6 @@ import frc.robot.subsystems.DriveSubsystem;
 import frc.robot.commands.DriveCommand;
 
 
-import frc.robot.commands.driveCommand;
 import edu.wpi.first.wpilibj.Talon;
 
 /**
@@ -24,25 +23,10 @@ import edu.wpi.first.wpilibj.Talon;
  */
 public class Robot extends TimedRobot {
 
-  public static DriveSubsystem driveSubsystem = new DriveSubsystem();
-<<<<<<< HEAD
-  
-  public static OI m_oi;
-
-=======
-
-  public static OI m_oi;
->>>>>>> ad88eb1dca9235863a0510d8ebfa6c44d0b07bdd
-
-  private Command m_autonomousCommand;
 
   private RobotContainer m_robotContainer;
 
-  Command driveCommand = new DriveCommand();
-<<<<<<< HEAD
-=======
 
->>>>>>> ad88eb1dca9235863a0510d8ebfa6c44d0b07bdd
   /**
    * This function is run when the robot is first started up and should be used
    * for any initialization code.
@@ -91,12 +75,6 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void autonomousInit() {
-    m_autonomousCommand = m_robotContainer.getAutonomousCommand();
-
-    // schedule the autonomous command (example)
-    if (m_autonomousCommand != null) {
-      m_autonomousCommand.schedule();
-    }
   }
 
   /** This function is called periodically during autonomous. */
@@ -112,15 +90,6 @@ public class Robot extends TimedRobot {
     // this line or comment it out.
     // This has all been a big prank, you really are dumb
 
-    driveCommand.start();
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> ad88eb1dca9235863a0510d8ebfa6c44d0b07bdd
-    if (m_autonomousCommand != null) {
-      m_autonomousCommand.cancel();
-    }
   }
 
   /** This function is called periodically during operator control. */
